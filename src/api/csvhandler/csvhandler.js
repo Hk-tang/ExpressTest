@@ -4,11 +4,11 @@ const fs = require("fs");
 const router = express.Router();
 
 
-router.get("/", (res, req) => {
+router.get("/", (req, res) => {
     fs.readFile(__dirname + "../../../../data/" + "users.json", "utf8", (err, data) => {
         console.log(data);
-        res.end(data);
-    })
-})
+        res.json(data);
+    });
+});
 
 module.exports = router;
