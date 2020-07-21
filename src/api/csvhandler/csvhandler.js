@@ -6,7 +6,6 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
     fs.readFile(__dirname + "../../../../data/" + "data.csv", "utf8", (err, data) => {
-        console.log(data);
         const lines = data.split("\n");
 
         const result = [];
