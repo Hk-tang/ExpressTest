@@ -14,7 +14,7 @@ app.get("/listUsers", (req, res, next) => {
     })
 })
 
-app.get('/:id', function (req, res, next) {
+app.get("/:id", function (req, res, next) {
     fs.readFile(__dirname + "../../data" + "/users.json", "utf8", function (err, data) {
         const users = JSON.parse(data);
         const user = users["user" + req.params.id]

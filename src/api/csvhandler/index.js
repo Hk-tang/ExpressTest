@@ -8,6 +8,6 @@ router.get("/", (req, res) => {
     });
 });
 
-router.use("/data", require("./csvhandler"));
+router.use("/get", require("./csvhandler"));
 
 module.exports = router;
