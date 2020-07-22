@@ -9,5 +9,6 @@ router.get("/", (req, res) => {
 });
 
 router.use("/csvhandler", require("./csvhandler"));
+router.use("/jsonhandler", require("./jsonhandler"));
 
 module.exports = router;
